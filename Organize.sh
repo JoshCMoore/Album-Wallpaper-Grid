@@ -1,7 +1,9 @@
 # \bin/bash
 x=10
 y=10
-for file in /home/josh/Desktop/*
+echo "Where are your albums?"
+read location
+for file in $location/*
 do
 	gvfs-set-attribute -t string "$file" 'metadata::nautilus-icon-position' "$x,$y"
 	x=$((x+64))
